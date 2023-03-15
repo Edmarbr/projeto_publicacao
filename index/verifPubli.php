@@ -40,10 +40,6 @@
         $tituloPubli = $_POST["Ftitulo"];
         $descricaoPubli = $_POST["Fdescricao"];
         PublicarImagem($arquivos['error'], $arquivos['size'], $arquivos['name'], $arquivos['tmp_name'], $tituloPubli, $descricaoPubli);
-        echo "ok";
         header("Location: principal.php?num=$_SESSION[codigo]");
-    } else {
-        echo "no";
     }
     mysqli_close($conectarBD);
-?>
