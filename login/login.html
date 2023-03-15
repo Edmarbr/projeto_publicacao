@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="stylelogin.css?v=1">
+</head>
+
+<body>
+    <div class="icone_retornar">
+        <abbr title="Voltar a página principal"><a href="../index/index.html"><img src="../imagens_icons/icons/icons8-esquerda-96.png" alt="Ícone de retorna a página principal"></a></abbr>
+    </div>
+    <form name="form_login" action="login.php" method="post">
+        <h1>Login</h1>
+
+        <div class="div_email">
+            <label for="iemal"><img src="../imagens_icons/icons/icon_email.png" alt="Ícone de email">Email</label>
+            <input type="email" name="form_email" id="iemail" required autocomplete="email"
+                placeholder="Digite seu email">
+        </div>
+        <div class="div_senha">
+            <label for="isenha"><img src="../imagens_icons/icons/icon_lock.png" alt="Ícone de Senha">Senha</label>
+            <input type="password" name="form_senha" id="isenha" required autocomplete="off"
+                placeholder="Digite sua senha">
+        </div>
+        <p><a href="#">Forgot Password?</a></p>
+        <div class="div_enviar_login">
+            <input type="submit" value="Login"><img src="../imagens_icons/icons/icon_send.png" alt="Ícone de enviar">
+        </div>
+    </form>
+</body>
+
+</html>

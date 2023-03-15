@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="stylecadastro.css?v=1">
+</head>
+<body>
+    <div class="icone_retornar">
+        <abbr title="Voltar a página principal"><a href="../index/index.html"><img src="../imagens_icons/icons/icons8-esquerda-96.png" alt="Ícone de retorna a página principal"></a></abbr>
+    </div>
+    <form name="form_cadastro" action="cadastro.php" method="post">
+        <h1>Sing Up</h1>
+
+        <div class="div_nome_usu">
+            <label for="inome"><img src="../imagens_icons/icons/icon_person.png" alt="Ícone de usuário">Nome</label>
+            <input type="text" name="form_nome" id="inome" required autocomplete="name" placeholder="Nome" maxlength="80">
+        </div>
+
+        <div class="div_email">
+            <label for="iemail"><img src="../imagens_icons/icons/icon_email.png" alt="Ícone de email">Email</label>
+            <input type="email" name="form_email" id="iemail" required autocomplete="email" placeholder="Email" maxlength="80">
+        </div>
+
+        <div class="div_senha">
+            <label for="isenha"><img src="../imagens_icons/icons/icon_lock.png" alt="Ícone de senha">Senha</label>
+            <input type="password" name="form_senha" id="isenha" required autocomplete="off" placeholder="Crie uma senha" maxlength="20">
+        </div>
+
+        <div class="div_confirm_senha">
+            <label for="iconfirm_senha"><img src="../imagens_icons/icons/icon_lock.png" alt="Ícone de Senha">Confirme sua senha</label>
+            <input type="password" name="form_confirm_senha" id="iconfirm_senha" required autocomplete="off" placeholder="Confirme sua senha" maxlength="20">
+        </div>
+
+        <div class="div_salvar_cadastro">
+            <img src="../imagens_icons/icons/icon_save.png" alt="Ícone de salvar cadastro">
+            <input type="submit" value="Save">
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c3fafad3;
+}
+
+.icone_retornar {
+    cursor: pointer;
+    margin-bottom: 350px;
+    position: relative;
+    left: -15%;
+}
+
+.icone_retornar img {
+    width: 70px;
+}
+
+form {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px #000000c0;
+}
+
+form h1 {
+    text-align: center;
+}
+
+form img {
+    height: 28px;
+}
+
+form .div_nome_usu, .div_email, .div_senha, .div_confirm_senha, label {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+form label {
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+form input {
+    outline: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+form .div_salvar_cadastro {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    background-color: #bfecfb;
+    width: 85px;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    transition: .13s ease-in-out;
+}
+
+form .div_salvar_cadastro input {
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+form .div_salvar_cadastro img {
+    height: 32px;
+}
+
+form .div_salvar_cadastro:active {
+    transform: translate(-3px, -3px);
+}
+
+form .div_salvar_cadastro:hover {
+    filter: drop-shadow(2px 2px 3px #000000c0);
+    background-color: #cef1fc;
+}
+
+@media screen and (max-width: 500px) {
+    div.icone_retornar {
+        left: 0%;
+    }
+
+    form {
+        width: 300px;
+    }
+}

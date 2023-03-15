@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css?v=1">
+    <link rel="stylesheet" href="mediasqueries.css?v=1" media="screen">
+    <!-- <link rel="shortcut icon" href="../imagens_icons/imgs/favicon.jpg" type="image/x-icon"> -->
+    <title>Home</title>
+</head>
+<body onresize="tamanho()">
+    <header>
+        <div class="div_header">
+            <abbr title="Página inicial">
+                <h1><a href="index.html">Home</a></h1>
+            </abbr>
+            <div class="div_pesquisa">
+                <input type="search" name="form_pesquisa" id="" placeholder="Search">
+                <button></button>
+            </div>
+            <div class="menu_nav">
+                <div class="img_login">
+                    <img src="../imagens_icons/icons/icon_menu.png" alt="Ícone de Login" id="imagem_menu">
+                </div>
+                <nav id="nav">
+                    <ul class="lista_login_singup">
+                        <abbr title="Login">
+                            <li><a href="../login/login.html"><button>Login</button></a></li>
+                        </abbr>
+                        <abbr title="Sing Up">
+                            <li><a href="../cadastro/cadastro.html"><button>Sing Up</button></a></li>
+                        </abbr>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="msgERRO">
+        <p>Faça <a href="../login/login.html" class="linksMSG">Login</a> ou <a href="../cadastro/cadastro.html" class="linksMSG">Cadastre-se</a> para navegar por essa página!</p>
+    </div>
+
+    <script src="../script/script.js"></script>
+</body>
+</html>
