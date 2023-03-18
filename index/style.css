@@ -109,7 +109,7 @@ header .div_header .menu_nav nav .lista_login_singup button {
     border: 2px solid #26c1fa;
     box-shadow: 2px 2px 3px #00000064;
     border-radius: 7px;
-    text-shadow: 2px 2px 3px  #007dab6d;
+    text-shadow: 2px 2px 3px #007dab6d;
 }
 
 header .div_header .menu_nav nav .lista_login_singup button:hover {
@@ -120,33 +120,43 @@ header .div_header .menu_nav nav .lista_login_singup button:hover {
     0% {
         transform: translateY(0px);
     }
+
     10% {
         transform: translateY(-1px);
     }
+
     20% {
         transform: translateY(-2px);
     }
+
     30% {
         transform: translateY(-3px);
     }
+
     40% {
         transform: translateY(-4px);
     }
+
     50% {
         transform: translateY(-5px);
     }
+
     60% {
         transform: translateY(-4px);
     }
+
     70% {
         transform: translateY(-3px);
     }
+
     80% {
         transform: translateY(-2px);
     }
+
     90% {
         transform: translateY(-1px);
     }
+
     100% {
         transform: translateY(0px);
     }
@@ -202,7 +212,7 @@ header .div_header nav ul.logout form abbr input {
     border: 2px solid #26c1fa;
     box-shadow: 2px 2px 3px #00000064;
     border-radius: 7px;
-    text-shadow: 2px 2px 3px  #007dab6d;
+    text-shadow: 2px 2px 3px #007dab6d;
 }
 
 div.newPubli {
@@ -228,6 +238,8 @@ main {
 }
 
 main section.secPubli {
+    width: 50%;
+    transition: .3s ease-in-out;
     background-color: white;
     margin-bottom: 10px;
     margin-top: 10px;
@@ -240,8 +252,9 @@ main section.secPubli h2, img.imgPubli {
 }
 
 main section.secPubli img {
-    width: 540px;
+    width: 95%;
     border-radius: 5px;
+    margin-left: 2.5%;
 }
 
 /*   Configurações da página de publicação   */

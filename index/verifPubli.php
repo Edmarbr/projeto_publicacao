@@ -43,3 +43,4 @@
         header("Location: principal.php?num=$_SESSION[codigo]");
     }
     mysqli_close($conectarBD);
+?>

@@ -1,5 +1,15 @@
 @charset "UTF-8";
 
+:root {
+    --transicao: .3s ease-in-out;
+}
+
+@media screen and (max-width: 850px) {
+    ::-webkit-scrollbar {
+        width: 0;
+    }
+}
+
 @media screen and (max-width: 550px) {
     header .div_header .menu_nav nav ul {
         flex-direction: column;
@@ -29,18 +39,19 @@
         line-height: 25px;
     }
 
-    main section.secPubli {
-        width: 350px;
+    main .secPubli {
+        transition: var(--transicao);
+        width: 70%;
     }
 
-    main section.secPubli img {
+    main .secPubli .imgPubli {
         width: 90%;
         margin-left: 5%;
     }
 
     div.newPubli {
         font-size: 30px;
-        left: 88%;
+        left: 90.5%;
         width: 45px;
         height: 45px;
     }

@@ -11,7 +11,7 @@
     <div class="icone_retornar">
         <abbr title="Voltar a página principal"><a href="../index/index.html"><img src="../imagens_icons/icons/icons8-esquerda-96.png" alt="Ícone de retorna a página principal"></a></abbr>
     </div>
-    <form name="form_cadastro" action="cadastro.php" method="post">
+    <form name="form_cadastro" action="cadastro.php" method="post" id="FormCadastro">
         <h1>Sing Up</h1>
 
         <div class="div_nome_usu">
@@ -26,18 +26,20 @@
 
         <div class="div_senha">
             <label for="isenha"><img src="../imagens_icons/icons/icon_lock.png" alt="Ícone de senha">Senha</label>
-            <input type="password" name="form_senha" id="isenha" required autocomplete="off" placeholder="Crie uma senha" maxlength="20">
+            <input type="password" name="form_senha" id="isenha" required autocomplete="off" placeholder="Crie uma senha" maxlength="20" minlength="8">
         </div>
 
         <div class="div_confirm_senha">
             <label for="iconfirm_senha"><img src="../imagens_icons/icons/icon_lock.png" alt="Ícone de Senha">Confirme sua senha</label>
-            <input type="password" name="form_confirm_senha" id="iconfirm_senha" required autocomplete="off" placeholder="Confirme sua senha" maxlength="20">
+            <input type="password" name="form_confirm_senha" id="iconfirm_senha" required autocomplete="off" placeholder="Confirme sua senha" maxlength="20" minlength="8">
         </div>
 
         <div class="div_salvar_cadastro">
             <img src="../imagens_icons/icons/icon_save.png" alt="Ícone de salvar cadastro">
-            <input type="submit" value="Save">
+            <input type="button" value="Save" id="btnSubmit">
         </div>
     </form>
+
+    <script src="validacao.js"></script>
 </body>
 </html>

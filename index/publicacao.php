@@ -12,8 +12,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nova publicação</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediasQueries.css">
+    <link rel="stylesheet" href="style.css?v=1">
+    <link rel="stylesheet" href="mediasQueries.css?v=1">
 </head>
 <body class="body_publicacao">
     <form action="verifPubli.php" method="post" enctype="multipart/form-data">
