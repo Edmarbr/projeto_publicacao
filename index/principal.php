@@ -1,5 +1,4 @@
 <?php
-
     include "../verificacao.inc";
     
 ?>
@@ -40,9 +39,9 @@
 
             if (isset($_GET["q"])){
                 $busca = $_GET["q"];
-                $select = mysqli_query($conectarBD, "SELECT titulo, descricao, path, data_, hora FROM arquivos WHERE titulo LIKE '%$busca%' OR descricao LIKE '%$busca%' ORDER BY data_ DESC, hora DESC;");
+                $select = mysqli_query($conectarBD, "SELECT nome_usu, titulo, descricao, path, data_, hora FROM arquivos WHERE titulo LIKE '%$busca%' OR descricao LIKE '%$busca%' ORDER BY data_ DESC, hora DESC;");
             } else {
-                $select = mysqli_query($conectarBD, "SELECT titulo, descricao, path, data_, hora FROM arquivos ORDER BY data_ DESC, hora DESC;");
+                $select = mysqli_query($conectarBD, "SELECT nome_usu, titulo, descricao, path, data_, hora FROM arquivos ORDER BY data_ DESC, hora DESC;");
             }
 
             if (isset($busca) && (!empty($busca))){
@@ -50,13 +49,13 @@
                     echo "<section class=secPubli> Não foi possível encontrar a pesquisa</section>";
                 }
             }
-            
 
             while ($valores = mysqli_fetch_row($select)){
                 echo "<section class=secPubli> <h2>$valores[0]</h2>";
-                echo "<img src='$valores[2]' alt='Imagem da publicação' class='imgPubli'>";
+                echo "<p class=pTitulo>$valores[1]</p>";
+                echo "<img src='$valores[3]' alt='Imagem da publicação' class='imgPubli'>";
                 echo "<br><hr><br>";
-                echo "<p>$valores[1]</p></section>";
+                echo "<p class=pDescricao>Descrição: $valores[2]</p></section>";
             }
             mysqli_close($conectarBD);
         ?>

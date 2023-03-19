@@ -2,8 +2,9 @@
     
     include "../conexaoBD.inc";
     session_start();
+    $nomeUsu = $_SESSION["nome"];
 
-    function PublicarImagem($error, $size, $name, $tmp_name, $titulo, $descricao)
+    function PublicarImagem($nomeUsua, $error, $size, $name, $tmp_name, $titulo, $descricao)
     {
         include "../conexaoBD.inc";
         // // verificação de erro
@@ -31,7 +32,7 @@
             date_default_timezone_set('America/Sao_Paulo');     // define o fuso horário padrão do site
             $data = date("Y/m/d");
             $hora = date("H:i:s");
-            mysqli_query($conectarBD, "INSERT INTO arquivos (nome, path, data_, hora, titulo, descricao) VALUES ('$name', '$path', '$data', '$hora', '$titulo', '$descricao');") or die(mysqli_error($conectarBD));
+            mysqli_query($conectarBD, "INSERT INTO arquivos (nome_usu, nome, path, data_, hora, titulo, descricao) VALUES ('$nomeUsua', '$name', '$path', '$data', '$hora', '$titulo', '$descricao');") or die(mysqli_error($conectarBD));
         }
     }
 
@@ -39,7 +40,7 @@
         $arquivos = $_FILES["Farquivos"];
         $tituloPubli = $_POST["Ftitulo"];
         $descricaoPubli = $_POST["Fdescricao"];
-        PublicarImagem($arquivos['error'], $arquivos['size'], $arquivos['name'], $arquivos['tmp_name'], $tituloPubli, $descricaoPubli);
+        PublicarImagem($nomeUsu, $arquivos['error'], $arquivos['size'], $arquivos['name'], $arquivos['tmp_name'], $tituloPubli, $descricaoPubli);
         header("Location: principal.php?num=$_SESSION[codigo]");
     }
     mysqli_close($conectarBD);

@@ -13,6 +13,7 @@
     if ($linhas_afetadas > 0){
         $numeroUsu = rand(1000000, 10000000);
         $_SESSION["codigo"] = $numeroUsu;
+        $_SESSION["nome"] = mysqli_fetch_row($resultadoConsul)[1];
         header("Location: ../index/principal.php?num=$numeroUsu");
     } else {
         header("Location: login.html");

@@ -19,20 +19,23 @@ body {
 }
 
 .icone_retornar {
-    cursor: pointer;
+    display: flex;
+    justify-content: right;
     margin-bottom: 350px;
     position: relative;
-    left: -15%;
 }
 
 .icone_retornar img {
     width: 70px;
+    cursor: pointer;
 }
 
 form {
+    transition: .3s ease-in-out;
     background-color: white;
     display: flex;
     flex-direction: column;
+    width: 400px;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 2px 2px 5px #000000c0;
@@ -96,12 +99,9 @@ form .div_salvar_cadastro:hover {
     background-color: #cef1fc;
 }
 
-@media screen and (max-width: 500px) {
-    div.icone_retornar {
-        left: 0%;
-    }
-
+@media screen and (max-width: 525px) {
     form {
-        width: 300px;
+            transition: .3s ease-in-out;
+            width: 300px;
     }
 }

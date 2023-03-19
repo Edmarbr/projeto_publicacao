@@ -251,6 +251,22 @@ main section.secPubli h2, img.imgPubli {
     margin-bottom: 20px;
 }
 
+main section.secPubli h2 {
+    font-family: cursive;
+}
+
+main section.secPubli p.pTitulo {
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #000000de;
+}
+
+main section.secPubli p.pDescricao {
+    font-size: 18px;
+}
+
 main section.secPubli img {
     width: 95%;
     border-radius: 5px;
