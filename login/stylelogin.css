@@ -96,34 +96,31 @@ form .div_email input, .div_senha input {
     outline: none;
 }
 
-form .div_enviar_login {
+form .div_enviar_login button {
     margin-left: auto;
     margin-right: auto;
     display: flex;
     align-items: center;
     margin-top: 15%;
+    justify-content: center;
     background-color: #bfecfb;
-    width: 90px;
+    width: 110px;
+    height: 50px;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
     transition: .13s ease-in-out;
+    border: none;
+    font-size: 20px;
 }
 
-form .div_enviar_login:active {
+form .div_enviar_login button:active {
     transform: translate(-3px, -3px);
 }
 
-form .div_enviar_login:hover {
+form .div_enviar_login button:hover {
     filter: drop-shadow(2px 2px 3px #000000c0);
     background-color: #cef1fc;
-}
-
-form .div_enviar_login input {
-    background-color: transparent;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
 }
 
 form .div_enviar_login img {

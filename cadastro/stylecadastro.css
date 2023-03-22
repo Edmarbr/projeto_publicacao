@@ -67,34 +67,31 @@ form input {
     padding: 2px;
 }
 
-form .div_salvar_cadastro {
+form .div_salvar_cadastro button {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-top: 15px;
     background-color: #bfecfb;
-    width: 85px;
+    width: 100px;
+    height: 50px;
     border-radius: 10px;
     padding: 5px;
-    cursor: pointer;
-    transition: .13s ease-in-out;
-}
-
-form .div_salvar_cadastro input {
     font-size: 18px;
-    background-color: transparent;
     border: none;
     cursor: pointer;
+    transition: .13s ease-in-out;
 }
 
 form .div_salvar_cadastro img {
     height: 32px;
 }
 
-form .div_salvar_cadastro:active {
+form .div_salvar_cadastro button:active {
     transform: translate(-3px, -3px);
 }
 
-form .div_salvar_cadastro:hover {
+form .div_salvar_cadastro button:hover {
     filter: drop-shadow(2px 2px 3px #000000c0);
     background-color: #cef1fc;
 }
