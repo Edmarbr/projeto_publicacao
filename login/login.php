@@ -6,13 +6,11 @@
     $email = $_POST["form_email"];
     $senha = $_POST["form_senha"];
 
-    $comandoSQL = "SELECT email, nome, senha FROM cadastro WHERE email = '$email' LIMIT 1";
+    $comandoSQL = "SELECT email, nome, senha FROM cadastro WHERE email = '$email' AND senha = '$senha'";
     $resultadoConsul = mysqli_query($conectarBD, $comandoSQL);
     $linhas_afetadas = mysqli_affected_rows($conectarBD);
 
-    $usu = mysqli_fetch_row($resultadoConsul);
-
-    if (password_verify($senha, $usu[2])){
+    if ($linhas_afetadas > 0){
         $numeroUsu = rand(1000000, 10000000);
         $_SESSION["codigo"] = $numeroUsu;
         $_SESSION["nome"] = mysqli_fetch_row($resultadoConsul)[1];
