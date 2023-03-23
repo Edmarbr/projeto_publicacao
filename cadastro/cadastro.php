@@ -6,7 +6,7 @@
 
         $nome = $_POST["form_nome"];
         $email = $_POST["form_email"];
-        $senha = $_POST["form_senha"];
+        $senha = password_hash($_POST["form_senha"], PASSWORD_DEFAULT);
 
         $numeroUsu = rand(1000000, 10000000);
         $_SESSION["codigo"] = $numeroUsu;
