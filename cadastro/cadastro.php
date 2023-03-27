@@ -6,7 +6,7 @@
         if (isset($_POST["form_nome"]) && isset($_POST["form_email"]) && isset($_POST["form_senha"])) {
                 $nome = $_POST["form_nome"];
                 $email = $_POST["form_email"];
-                $senha = password_hash($_POST["form_senha"], PASSWORD_DEFAULT);
+                $senha = $_POST["form_senha"];
                 
                 $numeroUsu = rand(1000000, 10000000);
                 $_SESSION["codigo"] = $numeroUsu;
