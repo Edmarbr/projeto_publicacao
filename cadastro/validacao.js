@@ -7,7 +7,7 @@ const nome = document.getElementById("inome")
 
 const Validacao = (emailFunc, senhaFunc, confirmSenhaFunc, nomeFunc) => {
     const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/    // verifica se o endereço de e-mail contém pelo menos um caractere antes e depois do símbolo "@" e pelo menos um caractere depois do último ponto "."
-    const nomeValido = /^[^\s]/
+    const nomeValido = /^[^\s]/     // verifica se o nome não está vazio e não inicia com espaço
 
     if (emailValido.test(emailFunc) && senhaFunc.length >= 8 && confirmSenhaFunc.length >= 8 && senhaFunc == confirmSenhaFunc && nomeValido.test(nomeFunc)) {
         Bntsubmit.type = 'submit'

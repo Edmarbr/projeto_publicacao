@@ -1,3 +1,5 @@
+// Configurações do menu burger
+
 let menu = document.querySelector("#imagem_menu")
 let div_menu = document.querySelector(".img_login")
 let nav = document.getElementById("nav")

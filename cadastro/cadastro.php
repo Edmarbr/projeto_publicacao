@@ -3,18 +3,26 @@
         session_start();
 
         include "../conexaoBD.inc";
+        if (isset($_POST["form_nome"]) && isset($_POST["form_email"]) && isset($_POST["form_senha"])) {
+                $nome = $_POST["form_nome"];
+                $email = $_POST["form_email"];
+                $senha = password_hash($_POST["form_senha"], PASSWORD_DEFAULT);
+                
+                $numeroUsu = rand(1000000, 10000000);
+                $_SESSION["codigo"] = $numeroUsu;
+                $_SESSION["nome"] = $nome;
 
-        $nome = $_POST["form_nome"];
-        $email = $_POST["form_email"];
-        $senha = password_hash($_POST["form_senha"], PASSWORD_DEFAULT);
+                $verificarEmail_Senha = mysqli_query($conectarBD, "SELECT email, senha FROM cadastro WHERE email = '$email' OR senha = '$senha'");
+                $linhasRetornadas = mysqli_affected_rows($conectarBD);
 
-        $numeroUsu = rand(1000000, 10000000);
-        $_SESSION["codigo"] = $numeroUsu;
-        $_SESSION["nome"] = $nome;
-
-        $comandoSQl = "INSERT INTO cadastro (nome, email, senha) VALUES ('$nome', '$email', '$senha');";
-        mysqli_query($conectarBD, $comandoSQl);
-        header("Location: ../index/principal.php?num=$numeroUsu");
+                if ($linhasRetornadas > 0) {                            // verificação se existe um email ou senha já registrado no banco de dados
+                        header("Location: cadastro.html");
+                } else {
+                        mysqli_query($conectarBD, "INSERT INTO cadastro (nome, email, senha) VALUES ('$nome', '$email', '$senha')");
+                        header("Location: ../index/principal.php?num=$numeroUsu");
+                }
+        }
+        
 
         mysqli_close($conectarBD);
 

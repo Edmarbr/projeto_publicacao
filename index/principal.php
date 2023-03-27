@@ -37,26 +37,28 @@
         <?php
             include "../conexaoBD.inc";
 
-            if (isset($_GET["q"])){
+            if (isset($_GET["q"])){     // se exitir alguma pesquisa
                 $busca = $_GET["q"];
-                $select = mysqli_query($conectarBD, "SELECT nome_usu, titulo, descricao, path, data_, hora FROM arquivos WHERE titulo LIKE '%$busca%' OR descricao LIKE '%$busca%' ORDER BY data_ DESC, hora DESC;");
+                $select = mysqli_query($conectarBD, "SELECT nome_usu, titulo, descricao, path, data_, hora FROM arquivos WHERE titulo LIKE '%$busca%' OR descricao LIKE '%$busca%' ORDER BY data_ DESC, hora DESC;");       // busca o título ou descrição que corresponde a busca feita
             } else {
-                $select = mysqli_query($conectarBD, "SELECT nome_usu, titulo, descricao, path, data_, hora FROM arquivos ORDER BY data_ DESC, hora DESC;");
+                $select = mysqli_query($conectarBD, "SELECT nome_usu, titulo, descricao, path, data_, hora FROM arquivos ORDER BY data_ DESC, hora DESC;");     // retorna todas as publicações
             }
 
-            if (isset($busca) && (!empty($busca))){
-                if (empty($busca) or mysqli_num_rows($select) == 0){
+            if (isset($busca) && (!empty($busca))){                     // se a busca existir e não for vazia
+                if (empty($busca) or mysqli_num_rows($select) == 0){    // verifica se foi encontrado algum resultado de acordo com a busca feita
                     echo "<section class=secPubli> Não foi possível encontrar a pesquisa</section>";
                 }
             }
 
             while ($valores = mysqli_fetch_row($select)){
-                echo "<section class=secPubli> <h2>$valores[0]</h2>";
-                echo "<p class=pTitulo>$valores[1]</p>";
-                echo "<img src='$valores[3]' alt='Imagem da publicação' class='imgPubli'>";
-                echo "<br><hr><br>";
-                echo "<p class=pDescricao>Descrição: $valores[2]</p></section>";
-            }
+                echo "<section class=secPubli>
+                        <h2>$valores[0]</h2>
+                        <p class=pTitulo>$valores[1]</p>
+                        <img src='$valores[3]' alt='Imagem da publicação' class='imgPubli'>
+                        <br><hr><br>
+                        <p class=pDescricao>Descrição: $valores[2]</p>
+                      </section>";
+            }                                           // adiciona as publicações no site
             mysqli_close($conectarBD);
         ?>
     </main>

@@ -2,6 +2,6 @@
 
     $conectarBD = mysqli_connect("localhost", "root", "");
 
-    mysqli_select_db($conectarBD, "login_cadastro");
+    mysqli_select_db($conectarBD, "publicacao");
 
 ?>
