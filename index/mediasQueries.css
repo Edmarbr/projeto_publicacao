@@ -8,6 +8,10 @@
     ::-webkit-scrollbar {
         width: 0;
     }
+
+    .body_publicacao form {
+        width: 75%;
+    }
 }
 
 @media screen and (max-width: 550px) {
@@ -61,10 +65,6 @@
     }
 
     .body_publicacao form {
-        width: 80%;
-    }
-
-    .body_publicacao form:hover {
-        width: 82%;
+        width: 70%;
     }
 }

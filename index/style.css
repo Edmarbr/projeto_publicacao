@@ -215,6 +215,44 @@ header .div_header nav ul.logout form abbr input {
     text-shadow: 2px 2px 3px #007dab6d;
 }
 
+header .div_header nav ul.logout form .confirmSaida {
+    background-color: whitesmoke;
+    width: 600px;
+    height: 400px;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+    position: fixed;
+    top: 20vh;
+    left: 28vw;
+}
+
+header .div_header nav ul.logout form .confirmSaida p {
+    margin-top: 50px;
+    margin-bottom: 150px;
+    font-size: 40px;
+}
+
+header .div_header nav ul.logout form .confirmSaida button {
+    width: 100px;
+    height: 50px;
+    font-family: 'Seconds';
+    background-color: lightgray;
+    border: none;
+    cursor: pointer;
+    color: white;
+
+    border: 2px solid #26c1fa;
+    box-shadow: 2px 2px 3px #00000064;
+    border-radius: 7px;
+    text-shadow: 2px 2px 3px #007dab6d;
+    font-size: 20px;
+    margin: 0px 20px;
+}
+
 div.newPubli {
     font-size: 30px;
     position: fixed;
@@ -280,7 +318,14 @@ main section.secPubli img {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
+}
+
+.body_publicacao a img {
+    cursor: pointer;
+    position: relative;
+    top: -240px;
+    height: 60px;
 }
 
 .body_publicacao form {
@@ -297,8 +342,6 @@ main section.secPubli img {
 
 .body_publicacao form:hover {
     box-shadow: 3px 3px 4px #0000007b;
-    height: 510px;
-    width: 62%;
 }
 
 .body_publicacao form h1 {
@@ -329,11 +372,23 @@ main section.secPubli img {
 }
 
 .body_publicacao form div.selecArquivo {
-    margin-top: 30px;
+    margin-top: 60px;
+}
+
+.body_publicacao form div.selecArquivo input[type="file"] {
+    display: none;
+}
+
+.body_publicacao form div.selecArquivo label {
+    background-color: #34348a;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .body_publicacao form div.botoes {
-    margin-top: 17%;
+    margin-top: 80px;
     margin-left: auto;
     margin-right: auto;
 }

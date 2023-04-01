@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="mediasQueries.css?v=1">
     <title>Home</title>
 </head>
-<body onresize="tamanho()">
+<body>
     <header>
         <div class="div_header">
             <h1><a href="#"><abbr title="Página inicial">Home</abbr></a></h1>
@@ -25,8 +25,15 @@
             </form>
                 <nav id="nav">
                     <ul class="logout">
-                        <form action="logout.php" method="get" name="formLogout">
-                            <abbr title="Logout"><input type="submit" value="Logout"></abbr>
+                        <form action="logout.php" method="get" name="formLogout" id="form_logout">
+                            <abbr title="Logout"><input type="button" value="Logout" id="BtnLogout"></abbr>
+                            <div class="confirmSaida">
+                                <p>Tem certeza que deseja sair?</p>
+                                <div>
+                                    <button type="button" class="btnOpc">Sim</button>
+                                    <button type="button" class="btnOpc">Não</button>
+                                </div>
+                            </div>
                         </form>
                     </ul>
                 </nav>

@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="mediasQueries.css?v=1">
 </head>
 <body class="body_publicacao">
+    <a href=<?php echo "principal.php?num=$_SESSION[codigo]" ?> ><img src="../imagens_icons/icons/icons8-esquerda-96.png" alt="Imagem de volta a página principal"></a>
     <form action="verifPubli.php" method="post" enctype="multipart/form-data">
         <h1>Nova publicação</h1>
         <div class="titulo">
@@ -29,8 +30,8 @@
         </div>
 
         <div class="selecArquivo">
-            <label for="iarquivo">Selecione o arquivo</label>
-            <input type="file" name="Farquivos" id="iarquivos" required><br><br>
+            <label for="iarquivos">Selecionar imagem</label>
+            <input type="file" name="Farquivos" id="iarquivos" required accept="image/*"><br><br>
         </div>
 
         <div class="botoes">
