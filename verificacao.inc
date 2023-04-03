@@ -7,12 +7,10 @@
         $numURL = $_GET["num"];
         
         if ($numSessao != $numURL){
-            echo "Você não tem permissão";
-            exit;
+            header("Location: index/login.html");
         }
     } else {
-        echo "Você não tem permissão";
-        exit;
+        header("Location: index/login.html");
     }
 
 ?>

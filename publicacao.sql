@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 28-Mar-2023 às 02:46
+-- Tempo de geração: 03-Abr-2023 às 21:07
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.2.0
 
@@ -37,6 +37,13 @@ CREATE TABLE `arquivos` (
   `titulo` varchar(100) NOT NULL,
   `descricao` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Extraindo dados da tabela `arquivos`
+--
+
+INSERT INTO `arquivos` (`cod_arquivo`, `nome_usu`, `nome`, `path`, `data_`, `hora`, `titulo`, `descricao`) VALUES
+(1, 'Edmar Brito', 'img.jpg', '../arquivos/642b2368649b7.jpg', '2023-04-03', '16:05:12', 'Titulo Publi', 'Descricão publi');
 
 -- --------------------------------------------------------
 
@@ -75,7 +82,7 @@ ALTER TABLE `cadastro`
 -- AUTO_INCREMENT de tabela `arquivos`
 --
 ALTER TABLE `arquivos`
-  MODIFY `cod_arquivo` int(8) NOT NULL AUTO_INCREMENT;
+  MODIFY `cod_arquivo` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `cadastro`
