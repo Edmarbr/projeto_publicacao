@@ -1,6 +1,6 @@
 <?php
 
-    include "../verificacao.inc";
+    include "../verificacao.php";
 
 ?>
 

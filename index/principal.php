@@ -1,5 +1,5 @@
 <?php
-    include "../verificacao.inc";
+    include "../verificacao.php";
     
 ?>
 
@@ -42,7 +42,7 @@
 
     <main>
         <?php
-            include "../conexaoBD.inc";
+            include "../conexaoBD.php";
 
             if (isset($_GET["q"])){     // se exitir alguma pesquisa
                 $busca = $_GET["q"];

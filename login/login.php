@@ -1,6 +1,6 @@
 <?php
     
-    include "../conexaoBD.inc";
+    include "../conexaoBD.php";
     session_start();
     
     if (isset($_POST["form_email"]) && isset($_POST["form_senha"])) {

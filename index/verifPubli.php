@@ -1,12 +1,12 @@
 <?php
     
-    include "../conexaoBD.inc";
+    include "../conexaoBD.php";
     session_start();
     $nomeUsu = $_SESSION["nome"];
 
     function PublicarImagem($nomeUsua, $error, $size, $name, $tmp_name, $titulo, $descricao)
     {
-        include "../conexaoBD.inc";
+        include "../conexaoBD.php";
 
         if ($error) {       // verificação de erro
             header("Location: publicacao.php?num=$_SESSION[codigo]");

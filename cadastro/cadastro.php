@@ -2,7 +2,7 @@
 
         session_start();
 
-        include "../conexaoBD.inc";
+        include "../conexaoBD.php";
         if (isset($_POST["form_nome"]) && isset($_POST["form_email"]) && isset($_POST["form_senha"])) {
                 $nome = $_POST["form_nome"];
                 $email = $_POST["form_email"];
