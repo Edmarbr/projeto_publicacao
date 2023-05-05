@@ -61,7 +61,7 @@
                 echo "<section class=secPubli>
                         <h2>$valores[0]</h2>
                         <p class=pTitulo>$valores[1]</p>
-                        <img src='$valores[3]' alt='Imagem da publicação' class='imgPubli'>
+                        <div><img src='$valores[3]' alt='Imagem da publicação' class='imgPubli'></div>
                         <br><hr><br>
                         <p class=pDescricao>Descrição: $valores[2]</p>
                       </section>";
@@ -73,7 +73,10 @@
     <abbr title="Nova publicação">
         <div class="newPubli"><a href="<?php echo "publicacao.php?num=$_SESSION[codigo]" ?>">+</a></div>
     </abbr>
-
+    
+    <footer>
+        
+    </footer>
     <script src="../script/script.js"></script>
 </body>
 </html>

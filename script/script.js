@@ -17,7 +17,6 @@ try {
         }
     })
 
-
     function tamanho() {
         if (window.innerWidth <= 550) {
             div_menu.style.display = 'block'

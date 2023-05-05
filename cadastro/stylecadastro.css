@@ -55,12 +55,12 @@ form .div_nome_usu, .div_email, .div_senha, .div_confirm_senha, label {
     margin-top: 5px;
 }
 
-form label {
+form div label {
     margin-right: 5px;
     font-weight: bold;
 }
 
-form input {
+form div input {
     outline: none;
     border: 1px solid black;
     border-radius: 5px;
@@ -96,9 +96,45 @@ form .div_salvar_cadastro button:hover {
     background-color: #cef1fc;
 }
 
-@media screen and (max-width: 525px) {
+@media screen and (max-width: 530px) {
+    body {
+        flex-direction: column;
+    }
+
+    .icone_retornar {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
     form {
-            transition: .3s ease-in-out;
-            width: 300px;
+        width: 70%;
+    }
+
+    form div label {
+        font-size: 15px;
+    }
+
+    form div input {
+        height: 13px;
+        font-size: 13px;
+    }
+
+    form div label img {
+        height: 25px
+    }
+}
+
+@media screen and (max-width: 450px) {
+    form .div_confirm_senha {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    form div input {
+        width: 90%;
     }
 }

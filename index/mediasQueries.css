@@ -1,7 +1,88 @@
 @charset "UTF-8";
 
-:root {
-    --transicao: .3s ease-in-out;
+/* config página inicial */
+
+@media screen and (max-width: 900px) {
+    div.msgERRO {
+        width: 70vw;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    header .div_header h1 {
+        font-size: 40px;
+    }
+
+    header .div_header .div_pesquisa {
+        height: 20px;
+    }
+
+    header .div_header .div_pesquisa button {
+        background-size: 25px;
+        height: 25px;
+    }
+
+    header .div_header .div_pesquisa input {
+        font-size: 12px;
+        width: 120px;
+    }
+
+    header .div_header .menu_nav nav .lista_login_singup button {
+        height: 40px;
+        width: 55px;
+        font-size: 11.5px;
+    }
+
+    header .div_header .menu_nav .img_login img {
+        height: 40px;
+        top: 4px;
+    }
+
+    div.msgERRO {
+        font-size: 16px;
+        padding: 10px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    header .div_header .menu_nav nav {
+        width: 0px;
+    }
+
+    header .div_header .menu_nav nav .lista_login_singup {
+        flex-direction: row;
+        margin-left: -84vw;
+    }
+}
+
+@media screen and (max-width: 315px) {
+    header .div_header h1 {
+        font-size: 35px;
+    }
+
+    header .div_header .div_pesquisa input {
+        width: 100px;
+    }
+
+    header .div_header .menu_nav nav .lista_login_singup button {
+        height: 40px;
+        width: 55px;
+        font-size: 11.5px;
+    }
+
+    header .div_header .menu_nav .img_login img {
+        height: 40px;
+        top: 4px;
+    }
+}
+
+/* Configurações da página principal */
+
+@media screen and (max-width: 1000px) {
+    main section.secPubli {
+        width: 60%;
+    }
 }
 
 @media screen and (max-width: 850px) {
@@ -10,7 +91,13 @@
     }
 
     .body_publicacao form {
-        width: 75%;
+        width: 0px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    main section.secPubli {
+        width: 80%;
     }
 }
 
@@ -43,11 +130,6 @@
         line-height: 25px;
     }
 
-    main .secPubli {
-        transition: var(--transicao);
-        width: 70%;
-    }
-
     main .secPubli .imgPubli {
         width: 90%;
         margin-left: 5%;
@@ -68,3 +150,4 @@
         width: 70%;
     }
 }
+

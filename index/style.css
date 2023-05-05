@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: 'Bebas';
-    src: url(../fonts/BebasNeue-Regular.ttf) format('TrueType');
+    src: url('../fonts/BebasNeue-Regular.ttf') format('TrueType');
 }
 
 @font-face {
     font-family: 'Seconds';
-    src: url(../fonts/KGSecondChancesSolid.ttf) format('TrueType');
+    src: url('../fonts/KGSecondChancesSolid.ttf') format('TrueType');
 }
 
 :root {
@@ -26,7 +26,7 @@ html, body {
 }
 
 body {
-    background: black url(../imagens_icons/imgs/imgFundo.jpg) center center no-repeat fixed;
+    background: black url('../imagens_icons/imgs/imgFundo.jpg') center center no-repeat fixed;
     background-size: cover;
     font-family: sans-serif;
 }
@@ -99,13 +99,11 @@ header .div_header .menu_nav nav .lista_login_singup li {
 header .div_header .menu_nav nav .lista_login_singup button {
     height: 40px;
     width: 65px;
-
     font-family: 'Seconds';
     background-color: lightgray;
     border: none;
     cursor: pointer;
     color: white;
-
     border: 2px solid #26c1fa;
     box-shadow: 2px 2px 3px #00000064;
     border-radius: 7px;
@@ -177,12 +175,12 @@ div.msgERRO {
     display: flex;
     flex-direction: column;
     width: 40vw;
-    height: 25vh;
+    height: 220px;
     justify-content: center;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    margin-top: 10%;
+    margin-top: 25vh;
     font-size: 18px;
 }
 
@@ -202,13 +200,11 @@ header .div_header nav ul.logout form abbr input {
     margin-right: 10px;
     height: 40px;
     width: 65px;
-
     font-family: 'Seconds';
     background-color: lightgray;
     border: none;
     cursor: pointer;
     color: white;
-
     border: 2px solid #26c1fa;
     box-shadow: 2px 2px 3px #00000064;
     border-radius: 7px;
@@ -275,8 +271,8 @@ main {
     flex-direction: column;
 }
 
-main section.secPubli {
-    width: 50%;
+main .secPubli {
+    width: 55%;
     transition: .3s ease-in-out;
     background-color: white;
     margin-bottom: 10px;
@@ -285,15 +281,15 @@ main section.secPubli {
     border-radius: 10px;
 }
 
-main section.secPubli h2, img.imgPubli {
+main .secPubli h2, .imgPubli {
     margin-bottom: 20px;
 }
 
-main section.secPubli h2 {
+main .secPubli h2 {
     font-family: cursive;
 }
 
-main section.secPubli p.pTitulo {
+main .secPubli .pTitulo {
     font-size: 25px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
@@ -301,14 +297,23 @@ main section.secPubli p.pTitulo {
     color: #000000de;
 }
 
-main section.secPubli p.pDescricao {
+main .secPubli .pDescricao {
     font-size: 18px;
 }
 
-main section.secPubli img {
-    width: 95%;
+main .secPubli div {
+    text-align: center;
+}
+
+main .secPubli div img {
+    width: 90%;
+    height: 300px;
+    object-fit: fill;
     border-radius: 5px;
-    margin-left: 2.5%;
+}
+
+footer {
+    height: 20px;
 }
 
 /*   Configurações da página de publicação   */
@@ -367,19 +372,19 @@ main section.secPubli img {
     font-size: 15px;
 }
 
-.body_publicacao form div.titulo {
+.body_publicacao form .titulo {
     margin-top: 30px;
 }
 
-.body_publicacao form div.selecArquivo {
+.body_publicacao form .selecArquivo {
     margin-top: 60px;
 }
 
-.body_publicacao form div.selecArquivo input[type="file"] {
+.body_publicacao form .selecArquivo input[type="file"] {
     display: none;
 }
 
-.body_publicacao form div.selecArquivo label {
+.body_publicacao form .selecArquivo label {
     background-color: #34348a;
     color: white;
     padding: 5px;
@@ -387,13 +392,13 @@ main section.secPubli img {
     cursor: pointer;
 }
 
-.body_publicacao form div.botoes {
+.body_publicacao form .botoes {
     margin-top: 80px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.body_publicacao form div.botoes input {
+.body_publicacao form .botoes input {
     height: 50px;
     width: 100px;
     border: 1px solid #595959d4;
@@ -404,7 +409,7 @@ main section.secPubli img {
     transition: .3s ease-in-out;
 }
 
-.body_publicacao form div.botoes input:hover {
+.body_publicacao form .botoes input:hover {
     height: 55px;
     width: 105px;
 }

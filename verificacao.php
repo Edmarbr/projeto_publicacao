@@ -7,10 +7,10 @@
         $numURL = $_GET["num"];
         
         if ($numSessao != $numURL){
-            header("Location: index/login.html");
+            header("Location: ../login/login.html");
         }
     } else {
-        header("Location: index/login.html");
+        header("Location: ../login/login.html");
     }
 
 ?>

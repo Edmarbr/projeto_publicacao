@@ -38,7 +38,7 @@ a {
 form {
     transition: .3s ease-in-out;
     background-color: white;
-    width: 350px;
+    width: 400px;
     height: 300px;
     display: flex;
     flex-direction: column;
@@ -127,9 +127,24 @@ form .div_enviar_login img {
     height: 30px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 530px) {
+    body {
+        flex-direction: column;
+    }
+
+    .icone_retornar {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
     form {
-        transition: .3s ease-in-out;
-        width: 300px;
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    form div input {
+        width: 90%;
     }
 }
