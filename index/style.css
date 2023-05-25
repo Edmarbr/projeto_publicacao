@@ -395,12 +395,23 @@ footer {
     display: none;
 }
 
+.body_publicacao form .selecArquivo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .body_publicacao form .selecArquivo label {
     background-color: #34348a;
     color: white;
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.body_publicacao form .selecArquivo  .imgPreview {
+    height: 100px;
+    border-radius: 10px;
 }
 
 .body_publicacao form .botoes {

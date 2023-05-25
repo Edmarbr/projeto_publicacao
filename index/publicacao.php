@@ -31,7 +31,8 @@
 
         <div class="selecArquivo">
             <label for="iarquivos">Selecionar imagem</label>
-            <input type="file" name="Farquivos" id="iarquivos" required accept="image/*"><br><br>
+            <input type="file" name="Farquivos" id="iarquivos" required accept="image/*">
+            <img src="../imagens_icons/imgs/img-preview.png" alt="Preview da imagem" id="imgPreview" class="imgPreview">
         </div>
 
         <div class="botoes">
@@ -39,5 +40,17 @@
             <input type="reset" value="Limpar">
         </div>
     </form>
+
+    <script>
+        // Configurações para mostra um preview da imagem que será publicada
+        const imgPreview = document.getElementById("imgPreview")
+        const inputFile = document.getElementById("iarquivos")
+
+        inputFile.addEventListener("change", () => {
+            if (inputFile.files[0]) {
+                imgPreview.src = URL.createObjectURL(inputFile.files[0])
+            }
+        })
+    </script>
 </body>
 </html>

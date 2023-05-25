@@ -285,6 +285,10 @@
     .body_publicacao form .selecArquivo {
         margin-top: 20px;
     }
+
+    .body_publicacao form .selecArquivo  .imgPreview {
+        height: 80px;
+    }
     
     .body_publicacao form .botoes {
         margin-top: 0px;
@@ -312,6 +316,10 @@
         font-size: 15px;
     }
 
+    .body_publicacao form .selecArquivo  .imgPreview {
+        height: 60px;
+    }
+
     .body_publicacao form .botoes input {
         font-size: 14px;
         width: 70px;
@@ -322,6 +330,10 @@
 @media screen and (max-width: 550px) {
     .body_publicacao form {
         width: 70%;
+    }
+
+    .body_publicacao form .selecArquivo  .imgPreview {
+        height: 60px;
     }
 }
 

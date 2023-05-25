@@ -54,7 +54,7 @@
                     echo "<section class=secPubli>
                         <h2>$valores[0]</h2>
                         <p class=pTitulo>$valores[1]</p>
-                        <div class='divImg'><img src='$valores[3]' alt='Imagem da publicação' class='imgPubli'></div>
+                        <div class='divImg'><img src='$valores[3]' alt='Imagem da publicação' class='imgPubli img-fluid'></div>
                         <br><hr><br>
                         <div class='divFooterPubli'>
                             <p class=pDescricao>Descrição: $valores[2]</p>
@@ -65,7 +65,7 @@
                     echo "<section class=secPubli>
                             <h2>$valores[0]</h2>
                             <p class=pTitulo>$valores[1]</p>
-                            <div><img src='$valores[3]' alt='Imagem da publicação' class='imgPubli'></div>
+                            <div  class='divImg'><img src='$valores[3]' alt='Imagem da publicação' class='imgPubli'></div>
                             <br><hr><br>
                             <div class='divFooterPubli'>
                                 <p class=pDescricao>Descrição: $valores[2]</p>
