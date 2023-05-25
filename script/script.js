@@ -1,12 +1,11 @@
 // Configurações do menu burger
 
-let menu = document.querySelector("#imagem_menu")
-let div_menu = document.querySelector(".img_login")
-let nav = document.getElementById("nav")
-let BtnLogout = document.getElementById("BtnLogout")
-let divConfirmSaida = document.querySelector(".confirmSaida")
-const btnsOpcs = [...document.querySelectorAll(".btnOpc")]
+const menu = document.querySelector("#imagem_menu")
+const div_menu = document.querySelector(".img_login")
+const nav = document.getElementById("nav")
+const BtnLogout = document.getElementById("BtnLogout")
 const form_logout = document.getElementById("form_logout")
+let iconsRemove = [...document.querySelectorAll(".imgRemove")]
 
 try {
     menu.addEventListener("click", () => {
@@ -33,17 +32,17 @@ try {
 // Configurações de logout
 
 BtnLogout.addEventListener("click", () => {
-    divConfirmSaida.style.display = 'flex'
-    btnsOpcs.map((ele, indice) => {
-        if (ele.click && indice == 0) {
-            ele.addEventListener("click", () => {
-                form_logout.submit()
-            })
-        }
-        if (ele.click && indice == 1) {
-            ele.addEventListener("click", () => {
-                divConfirmSaida.style.display = 'none'
-            })
+    if (confirm("Tem certeza que deseja sair?")) {
+        form_logout.submit()
+    }
+})
+
+// Configurações para remover a publicação
+
+iconsRemove.map((ele) => {
+    ele.addEventListener("click", (evt) => {
+        if (!confirm("Tem certeza que deseja excluir?")) {
+            evt.preventDefault()
         }
     })
 })

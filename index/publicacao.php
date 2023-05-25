@@ -19,12 +19,12 @@
     <a href=<?php echo "principal.php?num=$_SESSION[codigo]" ?> ><img src="../imagens_icons/icons/icons8-esquerda-96.png" alt="Imagem de volta a página principal"></a>
     <form action="verifPubli.php" method="post" enctype="multipart/form-data">
         <h1>Nova publicação</h1>
-        <div class="titulo">
+        <div class="titulo title_desc">
             <label for="ititulo">Título:</label>
             <input type="text" name="Ftitulo" id="ititulo" class="inputs_texts" required maxlength="100" autocomplete="off"><br><br>
         </div>
 
-        <div class="descricao">
+        <div class="descricao title_desc">
             <label for="idescricao">Descrição:</label>
             <input type="text" name="Fdescricao" id="idescricao" class="inputs_texts" required maxlength="255" autocomplete="off"><br><br>
         </div>

@@ -8,6 +8,26 @@
     }
 }
 
+@media screen and (max-width: 500px) {
+    header .div_header h1 {
+        font-size: 60px;
+    }
+
+    header .div_header .div_pesquisa {
+        height: 20px;
+    }
+
+    header .div_header .div_pesquisa button {
+        background-size: 30px;
+        height: 30px;
+    }
+
+    header .div_header .div_pesquisa input {
+        font-size: 14px;
+        width: 130px;
+    }
+}
+
 @media screen and (max-width: 420px) {
     header .div_header h1 {
         font-size: 40px;
@@ -51,12 +71,11 @@
     }
 
     header .div_header .menu_nav nav .lista_login_singup {
-        flex-direction: row;
-        margin-left: -84vw;
+        margin-left: -6vw;
     }
 }
 
-@media screen and (max-width: 315px) {
+@media screen and (max-width: 330px) {
     header .div_header h1 {
         font-size: 35px;
     }
@@ -80,8 +99,29 @@
 /* Configurações da página principal */
 
 @media screen and (max-width: 1000px) {
+    header .div_header nav ul.logout form .confirmSaida {
+        width: 500px;
+        height: 300px;
+        left: 26vw;
+    }
+
+    header .div_header nav ul.logout form .confirmSaida p {
+        font-size: 20px;
+    }
+
+    header .div_header nav ul.logout form .confirmSaida button {
+        width: 80px;
+        height: 45px;
+    }
+
     main section.secPubli {
         width: 60%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    header .div_header nav ul.logout form .confirmSaida {
+        left: 25vw;
     }
 }
 
@@ -90,8 +130,18 @@
         width: 0;
     }
 
-    .body_publicacao form {
-        width: 0px;
+    header .div_header nav ul.logout form .confirmSaida {
+        left: 22vw;
+    }
+
+    main section.secPubli {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    header .div_header nav ul.logout form .confirmSaida {
+        left: 16vw;
     }
 }
 
@@ -99,40 +149,62 @@
     main section.secPubli {
         width: 80%;
     }
+
+    header .div_header nav ul.logout form .confirmSaida {
+        width: 400px;
+        height: 250px;
+        left: 15vw;
+    }
+
+    header .div_header nav ul.logout form .confirmSaida p {
+        margin-bottom: 50px;
+    }
 }
 
 @media screen and (max-width: 550px) {
+    header .div_header nav ul.logout form .confirmSaida {
+        left: 13vw;
+        width: 350px;
+    }
+
+    header .div_header nav ul.logout form abbr input {
+        margin-right: 20px;
+    }   
+
     header .div_header .menu_nav nav ul {
         flex-direction: column;
     }
 
     header .div_header .menu_nav nav ul li {
-        margin-top: 10px;
-    }
-
-    header .div_header .menu_nav {
-        height: 47px;
+        margin-bottom: 10px;
     }
 
     header .div_header .menu_nav .img_login {
         display: block;
     }
 
-    header .div_header .menu_nav .img_login img {
-        cursor: pointer;
-    }
-
     header .div_header .menu_nav nav {
         display: none;
     }
 
-    div.msgERRO p {
-        line-height: 25px;
+    main .secPubli h2, .imgPubli {
+        margin-bottom: 5px;
     }
 
-    main .secPubli .imgPubli {
-        width: 90%;
-        margin-left: 5%;
+    main .secPubli h2 {
+        font-size: 22px;
+    }
+
+    main .secPubli .pTitulo {
+        font-size: 20px;
+    }
+
+    main .secPubli .pDescricao {
+        font-size: 15px;
+    }
+
+    main .secPubli .divImg img {
+        height: 200px;
     }
 
     div.newPubli {
@@ -141,13 +213,130 @@
         width: 45px;
         height: 45px;
     }
+}
 
-    header .div_header nav ul.logout form abbr input {
-        margin-right: 20px;
+@media screen and (max-width: 500px) {
+    header .div_header nav ul.logout form .confirmSaida {
+        left: 13vw;
+        width: 300px;
+        height: 200px;
     }
 
+    header .div_header nav ul.logout form .confirmSaida p {
+        font-size: 16px;
+    }
+
+    header .div_header nav ul.logout form .confirmSaida button {
+        width: 60px;
+        height: 35px;
+        font-size: 18px;
+    }
+
+    div.newPubli {
+        font-size: 25px;
+        left: 90.3%;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    header .div_header nav ul.logout form abbr input {
+        height: 35px;
+        width: 55px;
+        margin-right: 0;
+        font-size: 12px;
+    }
+
+    header .div_header nav ul.logout form .confirmSaida {
+        left: 5vw;
+        width: 300px;
+        height: 200px;
+    }
+
+    header .div_header nav ul.logout form .confirmSaida button {
+        width: 60px;
+        height: 35px;
+        font-size: 18px;
+    }
+
+    main .secPubli .divImg img {
+        height: 150px;
+    }
+
+    div.newPubli {
+        left: 90%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    main .secPubli .divImg img {
+        height: 120px;
+    }
+}
+
+/* configurações da página de publicação */
+
+@media screen and (max-width: 840px) {
+    .body_publicacao form .title_desc {
+        display: grid;
+    }
+
+    .body_publicacao form .selecArquivo {
+        margin-top: 20px;
+    }
+    
+    .body_publicacao form .botoes {
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .body_publicacao a img {
+        height: 50px;
+    }
+
+    .body_publicacao form {
+        height: 400px;
+    }
+
+    .body_publicacao form h1 {
+        font-size: 25px;
+    }
+
+    .body_publicacao form label {
+        font-size: 16px;
+    }
+
+    .body_publicacao form label {
+        font-size: 15px;
+    }
+
+    .body_publicacao form .botoes input {
+        font-size: 14px;
+        width: 70px;
+        height: 45px;
+    }
+}
+
+@media screen and (max-width: 550px) {
     .body_publicacao form {
         width: 70%;
     }
 }
 
+@media screen and (max-width: 400px) {
+    .body_publicacao {
+        flex-direction: column;
+    }
+
+    .body_publicacao a img {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+
+    .body_publicacao form {
+        width: 80%;
+    }
+}

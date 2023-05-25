@@ -36,7 +36,7 @@
         if ($moverArqui) {
             date_default_timezone_set('America/Sao_Paulo');     // define o fuso horário padrão
             $data = date("Y/m/d");
-            $hora = date("H:i:s");      // data e hora serão usados para definir o ordem das publicações
+            $hora = date("H:i:s");      // data e hora serão usados para definir a ordem das publicações
             mysqli_query($conectarBD, "INSERT INTO arquivos (nome_usu, nome, path, data_, hora, titulo, descricao) VALUES ('$nomeUsua', '$name', '$path', '$data', '$hora', '$titulo', '$descricao')");
         }
     }

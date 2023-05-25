@@ -21,4 +21,3 @@ Bntsubmit.addEventListener("click", () => {
     if (Bntsubmit.type == 'submit')
         formulario.submit()
 })
-

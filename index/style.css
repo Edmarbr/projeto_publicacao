@@ -83,6 +83,12 @@ header .div_header .div_pesquisa input {
     outline: none;
 }
 
+header .div_header .menu_nav {
+    height: 205px;
+    position: relative;
+    top: 80px;
+}
+
 header .div_header .menu_nav nav {
     display: block;
 }
@@ -165,6 +171,7 @@ header .div_header .menu_nav .img_login {
 }
 
 header .div_header .menu_nav .img_login img {
+    cursor: pointer;
     position: relative;
     left: 10%;
 }
@@ -224,6 +231,7 @@ header .div_header nav ul.logout form .confirmSaida {
     position: fixed;
     top: 20vh;
     left: 28vw;
+    margin: auto;
 }
 
 header .div_header nav ul.logout form .confirmSaida p {
@@ -285,27 +293,34 @@ main .secPubli h2, .imgPubli {
     margin-bottom: 20px;
 }
 
-main .secPubli h2 {
-    font-family: cursive;
-}
-
 main .secPubli .pTitulo {
     font-size: 25px;
-    font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     margin-bottom: 5px;
     color: #000000de;
 }
 
-main .secPubli .pDescricao {
-    font-size: 18px;
+main .secPubli .divFooterPubli {
+    display: flex;
+    justify-content: space-between;
 }
 
-main .secPubli div {
+main .secPubli .divFooterPubli .pDescricao {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .secPubli .divFooterPubli img {
+    cursor: pointer;
+}
+
+main .secPubli .divImg {
     text-align: center;
 }
 
-main .secPubli div img {
+main .secPubli .divImg img {
     width: 90%;
     height: 300px;
     object-fit: fill;
@@ -338,7 +353,7 @@ footer {
     flex-direction: column;
     background-color: #00000020;
     padding: 10px;
-    height: 500px;
+    height: 450px;
     width: 60%;
     border-radius: 10px;
     box-shadow: 2px 2px 3px #00000064;
@@ -372,12 +387,8 @@ footer {
     font-size: 15px;
 }
 
-.body_publicacao form .titulo {
+.body_publicacao form .titulo, .body_publicacao form .selecArquivo {
     margin-top: 30px;
-}
-
-.body_publicacao form .selecArquivo {
-    margin-top: 60px;
 }
 
 .body_publicacao form .selecArquivo input[type="file"] {
@@ -393,9 +404,7 @@ footer {
 }
 
 .body_publicacao form .botoes {
-    margin-top: 80px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 40px auto 0px auto;
 }
 
 .body_publicacao form .botoes input {
